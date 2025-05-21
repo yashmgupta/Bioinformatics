@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash's Lab & Bioinformatics Research Unit | Naresuan University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom DNA animation similar to example */
+        .dna-animation-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        .dna-strand {
+            position: absolute;
+            width: 2px; /* Adjust thickness */
+            height: 200%; /* Make strands long enough to scroll */
+            background: rgba(255, 255, 255, 0.15); /* Lighter strands for better visibility on gradient */
+            animation: dnaMove 20s linear infinite; /* Slower animation */
+        }
+        @keyframes dnaMove {
+            0% { transform: translateY(-50%) rotate(10deg); } /* Slight rotation */
+            100% { transform: translateY(0%) rotate(-10deg); }
+        }
+        .hero-gradient-bg {
+            background: linear-gradient(135deg, #4F46E5 0%, #2563EB 50%, #3B82F6 100%); /* Tailwind Indigo/Blue shades */
+        }
+         .tool-card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-dna text-indigo-600 text-2xl mr-2"></i>
+                        <span class="text-lg font-bold text-gray-900">Yash's Lab - Bioinformatics</span>
+                    </a>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="index.html" class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                    <a href="introduction.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Introduction</a>
+                    <a href="tools.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Tools & Projects</a>
+                    <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="introduction.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Introduction</a>
+                <a href="tools.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Tools & Projects</a>
+                <a href="about.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient-bg text-white dna-animation-bg">
+        <!-- Animated DNA Strands -->
+        <div class="dna-strand" style="left: 10%; animation-duration: 22s;"></div>
+        <div class="dna-strand" style="left: 20%; animation-duration: 18s; animation-delay: -2s;"></div>
+        <div class="dna-strand" style="left: 30%; animation-duration: 25s; animation-delay: -4s;"></div>
+        <div class="dna-strand" style="left: 40%; animation-duration: 17s; animation-delay: -6s;"></div>
+        <div class="dna-strand" style="left: 50%; animation-duration: 23s; animation-delay: -8s;"></div>
+        <div class="dna-strand" style="left: 60%; animation-duration: 19s; animation-delay: -10s;"></div>
+        <div class="dna-strand" style="left: 70%; animation-duration: 21s; animation-delay: -12s;"></div>
+        <div class="dna-strand" style="left: 80%; animation-duration: 16s; animation-delay: -14s;"></div>
+        <div class="dna-strand" style="left: 90%; animation-duration: 24s; animation-delay: -16s;"></div>
+
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Advancing DNA Sequence Analysis
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-xl text-indigo-100">
+                    Welcome to the Bioinformatics Research Unit at Naresuan University. Discover our tools and research in genomics.
+                </p>
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <div class="inline-flex rounded-md shadow">
+                        <a href="introduction.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-indigo-50">
+                            <i class="fas fa-book-open mr-2"></i>Learn More
+                        </a>
+                    </div>
+                    <div class="inline-flex">
+                        <a href="tools.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 bg-opacity-75 hover:bg-opacity-100">
+                           <i class="fas fa-tools mr-2"></i>Explore Tools
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview Section -->
+    <div class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Focus Areas</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Our Expertise in Bioinformatics
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white p-6 rounded-lg shadow-lg tool-card-hover transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i class="fas fa-cogs text-white text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">What is Bioinformatics?</h3>
+                        </div>
+                        <p class="text-gray-600">Defining the interdisciplinary field that develops methods and software tools for understanding biological data, especially DNA, RNA, and proteins.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg tool-card-hover transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i class="fas fa-search-plus text-white text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">DNA Sequence Analysis</h3>
+                        </div>
+                        <p class="text-gray-600">Delving into methods for DNA assembly, sequence comparison, gene identification, barcoding, and advanced machine learning applications.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg tool-card-hover transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i class="fas fa-flask text-white text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg font-medium text-gray-900">Our Research & Tools</h3>
+                        </div>
+                        <p class="text-gray-600">Explore our open-source tools and research projects aimed at solving complex biological problems through computation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">&copy; <span id="currentYear"></span> Yash's Lab and Bioinformatics Research Unit</p>
+            <p class="text-gray-500 text-sm">Department of Biology, Naresuan University</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

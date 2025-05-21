@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Projects | Yash's Lab & Bioinformatics Research Unit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tool-card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-100">
+
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                     <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-dna text-indigo-600 text-2xl mr-2"></i>
+                        <span class="text-lg font-bold text-gray-900">Yash's Lab - Bioinformatics</span>
+                    </a>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                    <a href="introduction.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Introduction</a>
+                    <a href="tools.html" class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Tools & Projects</a>
+                    <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="introduction.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Introduction</a>
+                <a href="tools.html" class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Tools & Projects</a>
+                <a href="about.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Toolkit</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Bioinformatics Tools & Projects
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Explore a collection of tools and projects developed for DNA sequence analysis and bioinformatics research.
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Tool Card: DNAConservation -->
+                <div class="tool-card-hover bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out flex flex-col" id="dnaconservation">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-3">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i class="fas fa-shield-alt text-white text-xl"></i> <!-- Icon for conservation -->
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-900">DNAConservation</h3>
+                        </div>
+                        <p class="text-gray-600 mb-2 text-sm">Conservation & Entropy Analyzer: Upload or paste FASTA sequences, align, and visualize nucleotide/k-mer conservation and entropy.</p>
+                        <p class="text-gray-700 mb-1 text-sm"><strong>Key Features:</strong> FASTA input, alignment, conservation & entropy visualization.</p>
+                        <p class="text-gray-700 text-sm"><strong>Relevance:</strong> Comparative genomics, identifying functional regions.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <a href="https://github.com/yashmgupta/DNAConservation" target="_blank" class="block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool Card: GeneBank-Genie -->
+                <div class="tool-card-hover bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out flex flex-col" id="genebank-genie">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-3">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i class="fas fa-database text-white text-xl"></i> <!-- Icon for database/records -->
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-900">GeneBank-Genie</h3>
+                        </div>
+                        <p class="text-gray-600 mb-2 text-sm">A versatile tool for the analysis of GenBank records.</p>
+                        <p class="text-gray-700 mb-1 text-sm"><strong>Key Features:</strong> GenBank file parsing, data extraction, sequence manipulation.</p>
+                        <p class="text-gray-700 text-sm"><strong>Relevance:</strong> Facilitates working with GenBank database.</p>
+                    </div>
+                     <div class="p-6 bg-gray-50">
+                        <a href="https://github.com/yashmgupta/GeneBank-Genie" target="_blank" class="block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool Card: Microsatellites_Hybrid-CNN-RNN -->
+                <div class="tool-card-hover bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out flex flex-col" id="microsatellites">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-3">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i class="fas fa-brain text-white text-xl"></i> <!-- Icon for ML/AI -->
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-900">Microsatellites CNN-RNN</h3>
+                        </div>
+                        <p class="text-gray-600 mb-2 text-sm">Efficient Classification of DNA Microsatellites Using a Hybrid CNN-RNN Model.</p>
+                        <p class="text-gray-700 mb-1 text-sm"><strong>Key Features:</strong> Deep learning, microsatellite classification.</p>
+                        <p class="text-gray-700 text-sm"><strong>Relevance:</strong> ML for identifying repetitive DNA elements.</p>
+                    </div>
+                     <div class="p-6 bg-gray-50">
+                        <a href="https://github.com/yashmgupta/Microsatellites_Hybrid-CNN-RNN" target="_blank" class="block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool Card: Representing-DNA -->
+                <div class="tool-card-hover bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out flex flex-col" id="representing-dna">
+                     <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-3">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i class="fas fa-project-diagram text-white text-xl"></i> <!-- Icon for representation/structure -->
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-900">Representing-DNA</h3>
+                        </div>
+                        <p class="text-gray-600 mb-2 text-sm">Representing DNA for Machine Learning Algorithms: A Primer on One-Hot, Binary, and Integer Encodings.</p>
+                        <p class="text-gray-700 mb-1 text-sm"><strong>Key Features:</strong> Encoding methods explained, examples, educational.</p>
+                        <p class="text-gray-700 text-sm"><strong>Relevance:</strong> Foundational for applying ML to DNA sequences.</p>
+                    </div>
+                     <div class="p-6 bg-gray-50">
+                        <a href="https://github.com/yashmgupta/Representing-DNA" target="_blank" class="block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool Card: nucleotide -->
+                <div class="tool-card-hover bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out flex flex-col" id="nucleotide">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-3">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i class="fas fa-superscript text-white text-xl"></i> <!-- Icon for nucleotide/string analysis -->
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-900">Nucleotide Analysis</h3>
+                        </div>
+                        <p class="text-gray-600 mb-2 text-sm">Jupyter notebook of alternative functions for nucleotide string analysis and plotting.</p>
+                        <p class="text-gray-700 mb-1 text-sm"><strong>Key Features:</strong> Sequence statistics, GC content, plotting utilities.</p>
+                        <p class="text-gray-700 text-sm"><strong>Relevance:</strong> Practical examples for basic DNA analysis.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <a href="https://github.com/yashmgupta/nucleotide" target="_blank" class="block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Tool Card: DNA-barcode-sequence-classification -->
+                <div class="tool-card-hover bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out flex flex-col" id="dna-barcode">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-3">
+                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                <i class="fas fa-qrcode text-white text-xl"></i> <!-- Icon for barcode/classification -->
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-900">DNA Barcode Classification</h3>
+                        </div>
+                        <p class="text-gray-600 mb-2 text-sm">A quantum-inspired tensor network-based machine learning model to categorize cytochrome c oxidase subunit I (COI).</p>
+                        <p class="text-gray-700 mb-1 text-sm"><strong>Key Features:</strong> Tensor network model, COI classification.</p>
+                        <p class="text-gray-700 text-sm"><strong>Relevance:</strong> Advanced ML for DNA barcode-based species ID.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <a href="https://github.com/yashmgupta/DNA-barcode-sequence-classification-" target="_blank" class="block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">&copy; <span id="currentYear"></span> Yash's Lab and Bioinformatics Research Unit</p>
+            <p class="text-gray-500 text-sm">Department of Biology, Naresuan University</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
