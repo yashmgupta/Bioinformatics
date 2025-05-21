@@ -70,7 +70,7 @@ For major changes, please discuss what you would like to change via an issue fir
 
 ## :memo: License
 
-The content of this website is proprietary to Yash's Lab and Bioinformatics Research Unit, Naresuan University, unless otherwise stated. The underlying code for the website structure is licensed under the [MIT License](LICENSE.md) (if you choose to add one - see below).
+The content of this website is proprietary to Yash's Lab and Bioinformatics Research Unit, Naresuan University, unless otherwise stated. The underlying code for the website structure is licensed under the [MIT License](LICENSE.md)
 
 ---
 
