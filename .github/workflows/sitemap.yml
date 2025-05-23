@@ -1,0 +1,26 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - main  # Change this if you use a different default branch
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Generate sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://nubioinfo.site  # Replace with your actual custom domain
+          path-to-root: .
+          
+      - name: Commit and push sitemap
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add sitemap.xml
+          git commit -m "Automated sitemap update" || echo "No changes to commit"
+          git push
