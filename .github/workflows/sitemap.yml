@@ -19,7 +19,7 @@ jobs:
       - name: Generate sitemap
         uses: cicirello/generate-sitemap@v1
         with:
-          base-url-path: https://nubioinfo.site  # Replace with your actual custom domain
+          base-url-path: https://www.nubioinfo.site  # Replace with your actual custom domain
           path-to-root: .
           
       - name: Configure Git
