@@ -5,11 +5,16 @@ on:
     branches:
       - main  # Change this if you use a different default branch
 
+permissions:
+  contents: write  # Make sure this permission is set
+
 jobs:
   sitemap:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history for better compatibility
       
       - name: Generate sitemap
         uses: cicirello/generate-sitemap@v1
@@ -17,10 +22,14 @@ jobs:
           base-url-path: https://nubioinfo.site  # Replace with your actual custom domain
           path-to-root: .
           
-      - name: Commit and push sitemap
+      - name: Configure Git
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
+          
+      - name: Commit and push sitemap
+        run: |
+          git pull origin main  # Pull latest changes before committing
           git add sitemap.xml
           git commit -m "Automated sitemap update" || echo "No changes to commit"
-          git push
+          git push origin main
